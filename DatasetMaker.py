@@ -27,6 +27,7 @@ for (dirpath, dirnames, filenames) in walk(readtraindatapath):
 		d = dirnames
 		j = 0
 		for n in d:
+			print(str(j)+": \""+n+"\",\n")
 			labelnames.write(str(j)+": \""+n+"\",\n")
 			j+=1
 	else:
@@ -62,7 +63,9 @@ for (dirpath, dirnames, filenames) in walk(readtestdatapath):
 			# print(readtestdatapath+d[i-1])
 			img = cv2.imread(readtestdatapath+d[i-1]+"/"+n)
 			newimg = cv2.resize(img,(250,250))
-			cv2.imwrite(writetestdatapath+n,newimg)
+			if not os.path.exists(writetestdatapath+d[i-1]):
+				os.mkdir(writetestdatapath+d[i-1])
+			cv2.imwrite(writetestdatapath+d[i-1]+"/"+n,newimg)
 	i+=1
 labelnames.close()
 file.close() 
