@@ -115,7 +115,6 @@ for t in range(epochs):
 	print(f"-------------------------------\nEpoch {t+1}\n-------------------------------")
 	epochtstart = time.perf_counter()
 	if len(acc)>2:
-		print(acc)
 		if (acc[len(acc)-1]-acc[len(acc)-2])*(acc[len(acc)-2]-acc[len(acc)-3])<0:
 			if learning_rate>learning_rate_limit:
 				learning_rate*=(0.1**(1/3))
