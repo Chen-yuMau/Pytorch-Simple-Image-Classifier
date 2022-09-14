@@ -82,7 +82,7 @@ I have since swapped the 512 nodes of each of the layers with a number N.
 
 I was experimenting with what number N could be that would make the accuracy higher. Since the accuracy barely increases after 30 epochs, I can train and test a small MLP like this in about 3 minutes. If I write a program to train and test 60 different MLPs it would only take 3 hours, and would be done in a reasonable amount of time. I realized that this way I can even plot out the **N to accuracy function** and I can gain insight to how this number N effects accuracy.I decided to write a "program that writes a program" or a "meta-program" called script.py to do this. This way I could easily bypass definition problems as well as object initialization problems.
 
-![Flowchart](https://github.com/Chen-yuMau/Pytorch-Simple-Image-Classifier/blob/main/Images/FLowchart3.png)
+![Flowchart](https://github.com/Chen-yuMau/Pytorch-Simple-Image-Classifier/blob/main/Images/Flowchart3.png)
 
 I go into detail about this in the next section.
 
